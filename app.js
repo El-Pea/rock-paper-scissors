@@ -8,37 +8,52 @@ function computerPlay(){
     return RPS;
 }
 
-function gameRound(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection){
     
-    // add case sensitivity handling
+    let p1 = playerSelection.toLowerCase();
+    let p2 = computerSelection.toLowerCase();
 
-    if (playerSelection == computerSelection) {
-        return 'It\'s a tie.'
+    let p1Win = `You win! ${playerSelection} beats ${computerSelection}.`;
+    let p1Lose = `You lose! ${computerSelection} beats ${playerSelection}.`;
+
+    if (p1 == p2){
+        return 'It\'s a tie.';
     }
-    if (playerSelection == 'Rock'){
-        if (computerSelection == 'Paper'){
-            // lose
+    if (p1 == 'rock'){
+        if (p2 == 'paper'){
+            return p1Lose;
         }
-        if (computerSelection == 'Scissors'){
-            // win
-        }
-    }
-    if (playerSelection == 'Paper'){
-        if (computerSelection == 'Scissors'){
-            // lose
-        }
-        if (computerSelection == 'Rock'){
-          // win
+        if (p2 == 'scissors'){
+            return p1Win;
         }
     }
-    if (playerSelection == 'Scissors'){
-        if (computerSelection == 'Rock'){
-           // lose
+    if (p1 == 'paper'){
+        if (p2 == 'scissors'){
+            return p1Lose;
         }
-        if (computerSelection == 'Paper'){
-           // win
+        if (p2 == 'rock'){
+            return p1Win;
+        }
+    }
+    if (p1 == 'scissors'){
+        if (p2 == 'rock'){
+            return p1Lose;
+        }
+        if (p2 == 'paper'){
+            return p1Win;
         }
     
     }
-    
+
+   
 }
+//const playerSelection = "rock";
+//const computerSelection = computerPlay();
+// console.log(playRound(playerSelection, computerSelection));
+
+function game(){
+    for (let i = 0; i < 5; i++) {
+        console.log(playRound(computerPlay(), computerPlay()));
+    }
+}
+game();
