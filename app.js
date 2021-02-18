@@ -13,6 +13,7 @@ function playRound(playerSelection, computerSelection){
     let p1 = playerSelection.toLowerCase();
     let p2 = computerSelection.toLowerCase();
 
+
     let p1Win = `You win! ${playerSelection} beats ${computerSelection}.`;
     let p1Lose = `You lose! ${computerSelection} beats ${playerSelection}.`;
 
@@ -42,18 +43,26 @@ function playRound(playerSelection, computerSelection){
         if (p2 == 'paper'){
             return p1Win;
         }
-    
-    }
-
-   
+    } 
 }
 //const playerSelection = "rock";
 //const computerSelection = computerPlay();
 // console.log(playRound(playerSelection, computerSelection));
+/*
+function playerInput(){
+    let input = prompt('Enter: Rock, Paper, Scissors');
+        input.toLowerCase();
+        if (input !== 'rock' || 'paper' || 'scissors'){
+            alert('Get outta town.')
+        } else {
+            return input;
+        }
+}
+*/
 
 function game(){
     for (let i = 0; i < 5; i++) {
-        console.log(playRound(computerPlay(), computerPlay()));
+        console.log(playRound(prompt(), computerPlay()));
     }
 }
 game();
