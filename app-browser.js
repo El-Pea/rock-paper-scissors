@@ -46,9 +46,26 @@ function playRound(playerSelection, computerSelection){
     } 
 }
 
+function clickGame() {
+    const buttons = document.querySelectorAll('button');
+    const winMessage = document.getElementById('win-message');
+
+    buttons.forEach((button) => {
+
+        button.addEventListener('click', () => {
+            return winMessage.textContent = playRound(button.id, computerPlay());
+        });
+    });
+}
+
+clickGame();
+/*
 function game(){
     for (let i = 0; i < 5; i++) {
-        //console.log(playRound(prompt(), computerPlay()));
+        console.log(playRound(prompt(), computerPlay()));
     }
-}
+
 game();
+
+}
+*/
