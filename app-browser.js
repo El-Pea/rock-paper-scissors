@@ -13,37 +13,55 @@ function playRound(playerSelection, computerSelection){
     let p1 = playerSelection.toLowerCase();
     let p2 = computerSelection.toLowerCase();
 
-
     let p1Win = `You win! ${playerSelection} beats ${computerSelection}.`;
     let p1Lose = `You lose! ${computerSelection} beats ${playerSelection}.`;
 
-    if (p1 == p2){
-        return 'It\'s a tie.';
+    let p1Score = 0;
+    let p2Score = 0;
+
+    let you = document.getElementById('player-score');
+    let computer = document.getElementById('computer-score');
+
+    /*
+    function scoreKeeper(decision){
+        if (theDecider === p1Win){p1Score++}; 
+        if (theDecider === p1Lose){p2Score++};
+
+        you.textContent = p1Score;
+        computer.textContent = p2Score;
     }
-    if (p1 == 'rock'){
-        if (p2 == 'paper'){
-            return p1Lose;
+    */
+    
+    function theDecider() {
+        if (p1 == p2){
+            return 'It\'s a tie.';
         }
-        if (p2 == 'scissors'){
-            return p1Win;
+        if (p1 == 'rock'){
+            if (p2 == 'paper'){
+                return p1Lose;
+            }
+            if (p2 == 'scissors'){
+                return p1Win;
+            }
         }
+        if (p1 == 'paper'){
+            if (p2 == 'scissors'){
+                return p1Lose;
+            }
+            if (p2 == 'rock'){
+                return p1Win;
+            }
+        }
+        if (p1 == 'scissors'){
+            if (p2 == 'rock'){
+                return p1Lose;
+            }
+            if (p2 == 'paper'){
+                return p1Win;
+            }
+        } 
     }
-    if (p1 == 'paper'){
-        if (p2 == 'scissors'){
-            return p1Lose;
-        }
-        if (p2 == 'rock'){
-            return p1Win;
-        }
-    }
-    if (p1 == 'scissors'){
-        if (p2 == 'rock'){
-            return p1Lose;
-        }
-        if (p2 == 'paper'){
-            return p1Win;
-        }
-    } 
+    return /*scoreKeeper(theDecider());*/ theDecider();
 }
 
 function clickGame() {
@@ -51,7 +69,6 @@ function clickGame() {
     const winMessage = document.getElementById('win-message');
 
     buttons.forEach((button) => {
-
         button.addEventListener('click', () => {
             return winMessage.textContent = playRound(button.id, computerPlay());
         });
