@@ -5,24 +5,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Rock Paper Scissors</h1>
-    <div id="opponents">
-        <div id="player-container">
-            <button class="button"id="rock">Rock</button>
-            <button class="button" id="paper">Paper</button>
-            <button class="button" id="scissors">Scissors</button>
-        </div>
-        <div id="computer-container">
-            <div id="computer">Computer Image</div>
-        </div>
-    </div>  
-    <div id="scores">
-        <div id="player-score">0</div>
-        <div id="computer-score">0</div>
+    <div id="grid-daddy">
+        <h1 class="grid-baby">Rock Paper Scissors</h1>
+        
+        <button class="grid-baby button"id="rock">Rock</button>
+        <button class="grid-baby button" id="paper">Paper</button>
+        <button class="grid-baby button" id="scissors">Scissors</button>
+            
+        <div class="grid-baby" id="computer">Computer Image</div>
+        
+        <div class="grid-baby" id="player-score">0</div>
+        <div class="grid-baby" id="computer-score">0</div>
+        
+        <div class="grid-baby" id="round-win-message"></div>
+        <div class="grid-baby" id="game-win-message"></div>
     </div>
-    <div id="round-win-message"></div>
-    <div id="game-win-message"></div>
-
     <script src="app-browser.js"></script>
 </body>
 </html>
