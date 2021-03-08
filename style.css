@@ -25,12 +25,15 @@ html {
   
   /*^^^RESET^^^*/
 
-  h1 {
+  * {
     text-align: center;
   }
 
   #header{grid-area: head;}
-  #rock{grid-area: rock;}
+  #rock{
+    grid-area: rock;
+    
+  }
   #paper{grid-area: paper;}
   #scissors{grid-area: scis;}
   #computer{grid-area: comp}
