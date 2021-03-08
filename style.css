@@ -30,20 +30,25 @@ html {
   }
 
   #header{grid-area: head;}
-  #rock{
-    grid-area: rock;
-    
-  }
+  #rock{grid-area: rock;}
   #paper{grid-area: paper;}
   #scissors{grid-area: scis;}
   #computer{grid-area: comp}
-  #player-score{grid-area: pscore;}
-  #computer-score{grid-area: cscore;}
+  #player-score{
+    grid-area: pscore;
+    align-self: center;
+  }
+  #computer-score{
+    grid-area: cscore;
+    align-self: center;
+  }
   #round-win-message{grid-area: rwin}
   #game-win-message{grid-area: gwin;}
 
   #grid-daddy{
+    /*padding: 25px;*/
     display: grid;
+    grid-template-rows: 10vh 10vh 10vh 10vh 10vh 10vh 10vh;
     grid-template-areas: 
     'head head head'
     'rock . comp'
@@ -58,6 +63,8 @@ html {
 
   }
 
-  
+  .far{
+    transform: scale(4);
+  }
 
   
