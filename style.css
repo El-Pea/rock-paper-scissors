@@ -29,10 +29,31 @@ html {
     text-align: center;
   }
 
+  #header{grid-area: head;}
+  #rock{grid-area: rock;}
+  #paper{grid-area: paper;}
+  #scissors{grid-area: scis;}
+  #computer{grid-area: comp}
+  #player-score{grid-area: pscore;}
+  #computer-score{grid-area: cscore;}
+  #round-win-message{grid-area: rwin}
+  #game-win-message{grid-area: gwin;}
+
   #grid-daddy{
     display: grid;
+    grid-template-areas: 
+    'head head head'
+    'rock auto comp'
+    'paper auto comp'
+    'scis auto comp'
+    'rwin rwin rwin'
+    'gwin gwin gwin';
   }
 
   .grid-baby{
 
   }
+
+  
+
+  
