@@ -43,9 +43,10 @@ html {
     display: grid;
     grid-template-areas: 
     'head head head'
-    'rock auto comp'
-    'paper auto comp'
-    'scis auto comp'
+    'rock . comp'
+    'paper . comp'
+    'scis . comp'
+    'pscore . cscore'
     'rwin rwin rwin'
     'gwin gwin gwin';
   }
