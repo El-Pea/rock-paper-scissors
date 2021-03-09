@@ -33,7 +33,10 @@ html {
   #rock{grid-area: rock;}
   #paper{grid-area: paper;}
   #scissors{grid-area: scis;}
-  #computer{grid-area: comp}
+  #computer{
+    grid-area: comp;
+    align-self: center;
+  }
   #player-score{
     grid-area: pscore;
     align-self: center;
@@ -42,7 +45,7 @@ html {
     grid-area: cscore;
     align-self: center;
   }
-  #round-win-message{grid-area: rwin}
+  #round-win-message{grid-area: rwin;}
   #game-win-message{grid-area: gwin;}
 
   #grid-daddy{
@@ -67,11 +70,10 @@ html {
     transform: scale(4);
   }
 
-  #computer{display: grid;}
-  /*did this to center comp-icon. player paper bug?*/
+  /*#computer{display: grid;}
+  did this to center comp-icon. player paper bug? yes*/
 
   #comp-icon{
     transform: scale(6);
-    align-self: center;
   }
   
