@@ -17,13 +17,10 @@ function gameOver(){
     endGame.textContent = '';
 }
 
-function playRound(playerSelection, computerSelection){
-    
-    let p1 = playerSelection.toLowerCase();
-    let p2 = computerSelection.toLowerCase();
+function playRound(p1, p2){
 
-    let p1Win = `You win! ${playerSelection} beats ${computerSelection}.`;
-    let p1Lose = `You lose! ${computerSelection} beats ${playerSelection}.`;
+    let p1Win = `You win! ${p1} beats ${p2}.`;
+    let p1Lose = `You lose! ${p2} beats ${p1}.`;
 
     let you = document.getElementById('player-score');
     let computer = document.getElementById('computer-score');
@@ -49,27 +46,27 @@ function playRound(playerSelection, computerSelection){
         if (p1 === p2){
             return 'It\'s a tie.';
         }
-        if (p1 === 'rock'){
-            if (p2 === 'paper'){
+        if (p1 === 'Rock'){
+            if (p2 === 'Paper'){
                 return p1Lose;
             }
-            if (p2 === 'scissors'){
+            if (p2 === 'Scissors'){
                 return p1Win;
             }
         }
-        if (p1 === 'paper'){
-            if (p2 === 'scissors'){
+        if (p1 === 'Paper'){
+            if (p2 === 'Scissors'){
                 return p1Lose;
             }
-            if (p2 === 'rock'){
+            if (p2 === 'Rock'){
                 return p1Win;
             }
         }
-        if (p1 === 'scissors'){
-            if (p2 === 'rock'){
+        if (p1 === 'Scissors'){
+            if (p2 === 'Rock'){
                 return p1Lose;
             }
-            if (p2 === 'paper'){
+            if (p2 === 'Paper'){
                 return p1Win;
             }
         } 

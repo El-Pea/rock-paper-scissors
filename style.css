@@ -27,12 +27,13 @@ html {
 
   * {
     text-align: center;
+    font-family: 'Fredoka One', cursive;
   }
 
   #header{grid-area: head;}
-  #rock{grid-area: rock;}
-  #paper{grid-area: paper;}
-  #scissors{grid-area: scis;}
+  #Rock{grid-area: rock;}
+  #Paper{grid-area: paper;}
+  #Scissors{grid-area: scis;}
   #computer{
     grid-area: comp;
     align-self: center;
@@ -46,10 +47,14 @@ html {
     align-self: center;
   }
   #round-win-message{grid-area: rwin;}
-  #game-win-message{grid-area: gwin;}
+  #game-win-message{
+    grid-area: gwin;
+    background-color: khaki;
+    
+  }
 
   #grid-daddy{
-    /*padding: 25px;*/
+    padding: 25px;
     display: grid;
     grid-template-rows: 10vh 10vh 10vh 10vh 10vh 10vh 10vh;
     grid-template-areas: 
@@ -62,16 +67,9 @@ html {
     'gwin gwin gwin';
   }
 
-  .grid-baby{
-
-  }
-
   .far{
     transform: scale(4);
   }
-
-  /*#computer{display: grid;}
-  did this to center comp-icon. player paper bug? yes*/
 
   #comp-icon{
     transform: scale(6);
