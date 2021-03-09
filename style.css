@@ -30,7 +30,11 @@ html {
     font-family: 'Fredoka One', cursive;
   }
 
-  #header{grid-area: head;}
+  #header{
+    grid-area: head;
+    /*font-size: 5.5vh;*/
+    font-size: 42px;
+  }
   #Rock{grid-area: rock;}
   #Paper{grid-area: paper;}
   #Scissors{grid-area: scis;}
@@ -49,8 +53,6 @@ html {
   #round-win-message{grid-area: rwin;}
   #game-win-message{
     grid-area: gwin;
-    background-color: khaki;
-    
   }
 
   #grid-daddy{
@@ -75,3 +77,13 @@ html {
     transform: scale(6);
   }
   
+  .low{
+    font-size: 28px;
+  }
+
+  #game-win-message{color: red;}
+
+  button{
+    background-color:#ceecff;
+    color:mediumblue;
+  }
