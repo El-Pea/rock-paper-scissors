@@ -67,4 +67,11 @@ html {
     transform: scale(4);
   }
 
+  #computer{display: grid;}
+  /*did this to center comp-icon. player paper bug?*/
+
+  #comp-icon{
+    transform: scale(6);
+    align-self: center;
+  }
   

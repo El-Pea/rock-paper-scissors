@@ -4,9 +4,9 @@ let p2Score = 0;
 function computerPlay(){
     let RPS = Math.floor((Math.random() * (3)) + 1);
 
-    if (RPS == 1) {RPS = 'Rock'};
-    if (RPS == 2) {RPS = 'Paper'};
-    if (RPS == 3) {RPS = 'Scissors'};
+    if (RPS === 1) {RPS = 'Rock'};
+    if (RPS === 2) {RPS = 'Paper'};
+    if (RPS === 3) {RPS = 'Scissors'};
 
     return RPS;
 }
@@ -22,8 +22,8 @@ function playRound(playerSelection, computerSelection){
     let p1 = playerSelection.toLowerCase();
     let p2 = computerSelection.toLowerCase();
 
-    let p1Win = `You win! ${playerSelection} beats ${computerSelection}.`;
-    let p1Lose = `You lose! ${computerSelection} beats ${playerSelection}.`;
+    let p1Win = `You win! ${p1} beats ${p2}.`;
+    let p1Lose = `You lose! ${p2} beats ${p1}.`;
 
     let you = document.getElementById('player-score');
     let computer = document.getElementById('computer-score');
