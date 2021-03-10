@@ -37,7 +37,7 @@ html {
   #Rock{grid-area: rock;}
   #Paper{grid-area: paper;}
   #Scissors{grid-area: scis;}
-  #computer-image{
+  #computer-container{
     grid-area: comp;
     align-self: center;
   }
@@ -76,8 +76,9 @@ html {
     transform: scale(4);
   }
 
-  #comp-icon{
+  .fa-robot{
     transform: scale(6);
+    color: red;
   }
   
   .low{

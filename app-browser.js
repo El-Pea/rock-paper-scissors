@@ -2,7 +2,7 @@ let p1Score = 0;
 let p2Score = 0;
 
 const replay = document.getElementById('play-again');
-replay.hidden = true;
+replay.style.visibility = 'hidden';
 
 function computerPlay(){
     let RPS = Math.floor((Math.random() * (3)) + 1);
@@ -12,10 +12,6 @@ function computerPlay(){
     if (RPS === 3) {RPS = 'Scissors'};
 
     return RPS;
-}
-
-function showComputer(RPS){
-    const compImage = document.getElementById('computer-image');
 }
 
 function playRound(p1, p2){
@@ -96,7 +92,7 @@ function killGame(){
     buttons.forEach((button) => {
         button.disabled = true;
     });
-    replay.hidden = false;
+    replay.style.visibility = 'visible';
     replay.onclick = ()=> location.reload();
 }
 
