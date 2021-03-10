@@ -1,6 +1,9 @@
 let p1Score = 0;
 let p2Score = 0;
 
+const replay = document.getElementById('play-again');
+replay.hidden = true;
+
 function computerPlay(){
     let RPS = Math.floor((Math.random() * (3)) + 1);
 
@@ -9,12 +12,6 @@ function computerPlay(){
     if (RPS === 3) {RPS = 'Scissors'};
 
     return RPS;
-}
-
-function restart(){
-    p1Score = 0;
-    p2Score = 0;
-    endGame.textContent = '';
 }
 
 function playRound(p1, p2){
@@ -80,7 +77,7 @@ function playRound(p1, p2){
 }
 
 function clickGame(){
-    const buttons = document.querySelectorAll('button');
+    const buttons = document.querySelectorAll('.player');
     const winMessage = document.getElementById('round-win-message');
 
     buttons.forEach((button) => {
@@ -91,10 +88,12 @@ function clickGame(){
 }
 
 function killGame(){
-    const buttons = document.querySelectorAll('button');
+    const buttons = document.querySelectorAll('.player');
     buttons.forEach((button) => {
         button.disabled = true;
     });
+    replay.hidden = false;
+    replay.onclick=()=>location.reload();
 }
 
 clickGame();

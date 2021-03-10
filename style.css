@@ -54,6 +54,9 @@ html {
   #game-win-message{
     grid-area: gwin;
   }
+  #play-again{
+    grid-area: play;
+  }
 
   #grid-daddy{
     padding: 25px;
@@ -66,7 +69,8 @@ html {
     'scis . comp'
     'pscore . cscore'
     'rwin rwin rwin'
-    'gwin gwin gwin';
+    'gwin gwin gwin'
+    '. play .';
   }
 
   .far{
@@ -86,4 +90,8 @@ html {
   button{
     background-color:#ceecff;
     color:mediumblue;
+  }
+
+  button:hover{
+    background-color:#b0e0fd;
   }
