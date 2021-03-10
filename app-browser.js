@@ -14,14 +14,18 @@ function computerPlay(){
     return RPS;
 }
 
+function showComputer(RPS){
+    const compImage = document.getElementById('computer-image');
+}
+
 function playRound(p1, p2){
 
-    let p1Win = `You win! ${p1} beats ${p2}.`;
-    let p1Lose = `You lose! ${p2} beats ${p1}.`;
+    const p1Win = `You win! ${p1} beats ${p2}.`;
+    const p1Lose = `You lose! ${p2} beats ${p1}.`;
 
-    let you = document.getElementById('player-score');
-    let computer = document.getElementById('computer-score');
-    let endGame = document.getElementById('game-win-message');
+    const you = document.getElementById('player-score');
+    const computer = document.getElementById('computer-score');
+    const endGame = document.getElementById('game-win-message');
 
     function score(decision){
         if (decision === p1Win){
@@ -93,7 +97,7 @@ function killGame(){
         button.disabled = true;
     });
     replay.hidden = false;
-    replay.onclick=()=>location.reload();
+    replay.onclick = ()=> location.reload();
 }
 
 clickGame();

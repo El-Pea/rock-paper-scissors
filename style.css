@@ -32,13 +32,12 @@ html {
 
   #header{
     grid-area: head;
-    /*font-size: 5.5vh;*/
     font-size: 42px;
   }
   #Rock{grid-area: rock;}
   #Paper{grid-area: paper;}
   #Scissors{grid-area: scis;}
-  #computer{
+  #computer-image{
     grid-area: comp;
     align-self: center;
   }
