@@ -11,7 +11,7 @@ function computerPlay(){
     return RPS;
 }
 
-function gameOver(){
+function restart(){
     p1Score = 0;
     p2Score = 0;
     endGame.textContent = '';
@@ -27,17 +27,22 @@ function playRound(p1, p2){
     let endGame = document.getElementById('game-win-message');
 
     function score(decision){
-        if (decision === p1Win){p1Score++}; 
-        if (decision === p1Lose){p2Score++};
+        if (decision === p1Win){
+            p1Score++
+            you.textContent = p1Score;
+        }; 
+        if (decision === p1Lose){
+            p2Score++
+            computer.textContent = p2Score;
+        };
         if (p1Score === 5){
             endGame.textContent = 'You win the game!';
+            return killGame();
         }
         if (p2Score === 5){
             endGame.textContent = 'Computer wins the game!';
+            return killGame();
         }   
-
-        you.textContent = p1Score;
-        computer.textContent = p2Score;
 
         return decision;
     }
@@ -75,7 +80,6 @@ function playRound(p1, p2){
 }
 
 function clickGame(){
-    
     const buttons = document.querySelectorAll('button');
     const winMessage = document.getElementById('round-win-message');
 
@@ -83,6 +87,13 @@ function clickGame(){
         button.addEventListener('click', () => {
             return winMessage.textContent = playRound(button.id, computerPlay());
         });
+    });
+}
+
+function killGame(){
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach((button) => {
+        button.disabled = true;
     });
 }
 
