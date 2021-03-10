@@ -34,7 +34,7 @@ function playRound(p1, p2){
         }
         if (p2Score === 5){
             endGame.textContent = 'Computer wins the game!';
-        }    
+        }   
 
         you.textContent = p1Score;
         computer.textContent = p2Score;
@@ -71,10 +71,10 @@ function playRound(p1, p2){
             }
         } 
     }
-    return score(theDecider()); /*theDecider();*/
+    return score(theDecider()); 
 }
 
-function clickGame() {
+function clickGame(){
     
     const buttons = document.querySelectorAll('button');
     const winMessage = document.getElementById('round-win-message');
@@ -87,13 +87,3 @@ function clickGame() {
 }
 
 clickGame();
-/*
-function game(){
-    for (let i = 0; i < 5; i++) {
-        console.log(playRound(prompt(), computerPlay()));
-    }
-
-game();
-
-}
-*/
