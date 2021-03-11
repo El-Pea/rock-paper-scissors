@@ -28,6 +28,7 @@ html {
   * {
     text-align: center;
     font-family: 'Fredoka One', cursive;
+    touch-action: manipulation;
   }
 
   #header{
