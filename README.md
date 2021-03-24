@@ -1,6 +1,7 @@
-<h1>TOP Rock Paper Scissors project</h1>
+<h1>TOP Rock Paper Scissors Project</h1>
 
-[Check it out!](https://el-pea.github.io/rock-paper-scissors/)
+**[Check it out!](https://el-pea.github.io/rock-paper-scissors/)**
+[TOP - The Odin Project](https://www.theodinproject.com/faq)
 
 Need to find way to disable double click zoom on mobile
 
