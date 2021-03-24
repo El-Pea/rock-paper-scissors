@@ -1,4 +1,4 @@
-TOP Rock Paper Scissors project
+<h1>TOP Rock Paper Scissors project</h1>
 
 [Check it out!](https://el-pea.github.io/rock-paper-scissors/)
 
