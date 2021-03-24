@@ -1,8 +1,14 @@
 TOP Rock Paper Scissors project
 
+[Check it out!](https://el-pea.github.io/rock-paper-scissors/)
+
 Need to find way to disable double click zoom on mobile
 
-Takeaways:
-  -Callbacks
-  -forEach
-  -Grid
+Next steps:</br>
+* Find hover equivalent for mobile
+* Figure out why Safari mobile has a gap at the bottom of grid-target
+
+Takeaways:</br>
+  -Callbacks</br>
+  -forEach</br>
+  -Grid</br>
