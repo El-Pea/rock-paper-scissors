@@ -1,6 +1,6 @@
 <h1>TOP Rock Paper Scissors Project</h1>
 
-**[Check it out!](https://el-pea.github.io/rock-paper-scissors/)**</br>
+<h3>[Check it out!](https://el-pea.github.io/rock-paper-scissors/)**</h3>
 
 [TOP - The Odin Project](https://www.theodinproject.com/faq)
 
